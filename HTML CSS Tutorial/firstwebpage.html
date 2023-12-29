@@ -1,18 +1,165 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>First Webpage</title>
-        <link rel="stylesheet" href="./assets/external.css" />
+        <link rel="stylesheet" title="default css" href="./assets/external.css" />
         <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-        <meta name="author" content="Akash soni" />
-        <meta charset="utf-8" />
-        <style></style>
-        <script></script>
         <!-- meta tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Akash soni" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: blueviolet;
+            }
+
+            /*
+                selector {
+                    property: value;
+                }
+             */
+
+            /* css selectors */
+                /* id selector (#) */
+                    #para1 {
+                        font-style: italic;
+                    }
+                    #para2 {
+                        font-weight: bold;
+                    }
+
+                /* class selector (.) */
+                    .textbox {
+                        border: 2px solid rgb(10, 255, 10);
+                    }
+
+                /* tag selector */
+                    input {
+                        background-color: rgb(255, 255, 0);
+                    }
+
+                /* grouping of selectors (,) */
+                    table,th,td {
+                        border: 1px dashed red;
+                        border-style: ridge;
+                    }
+
+                /* universal selector */
+                    table * {
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        font-weight: normal;
+                    }
+
+                /* attribute selector */
+                    img[src="./assets/image.jpeg"] {
+                        height: 100px;
+                    }
+
+                /* relational selector */
+                #john, #john div {
+                    background-color: white;
+                    margin: 20px;
+                    padding: 15px;
+                    border: 2px solid red;
+                }
+
+                    /* descendent selector ( ) */
+                        #rohan div {
+                            background-color: aqua;
+                        }
+
+                    /* child selector (>) */
+                        #john>div {
+                            background-color: blueviolet;
+                        }
+
+                    /* adjacent selector (+) */
+                        #emma+div {
+                            background-color: coral;
+                        }
+                        
+                    /* sibling selector (~) */
+                        #lee ~ div {
+                            background-color: chocolate;
+                        }
+
+            /* classes in css */
+                #para1:hover {
+                    font-size: 50px;
+                    font-weight: 900;
+                    color: white;
+                }
+
+                input:focus {
+                    padding: 30px;
+                    border: 3px solid yellow;
+                    background-color: white;
+                }
+
+                #steve>div:nth-last-child(2) {
+                    background-color: darkgreen;
+                }
+
+            /* transitions in css */
+                #box {
+                    height: 300px; 
+                    width: 300px; 
+                    background-color: cyan;
+                    transition: width ease-in 5s,  height 5s;
+                    transition-timing-function: ease-in-out;
+                }
+
+                #box:hover {
+                    width: 500px;
+                    height: 500px;
+                }
+
+            /* animations in css */
+                @keyframes sample {
+                    0% { background-color: red; height: 100px;}
+                    20% { background-color: rgb(102, 255, 0);}
+                    80% { background-color: rgb(43, 0, 255);}
+                    100% {background-color: cyan; height: 500px;}
+                }
+
+                #box {
+                    animation-name: sample;
+                    animation-duration: 4s;
+                    animation-delay: 5s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate-reverse;
+                }
+
+        </style>
+        <script></script>
+       
+       
     </head>
-    <body>
+    <body style="background-color: cornflowerblue;">
+        <div id="box" style=""></div>
+        <div id="john"> 
+            <div id="steve">
+                <div id="lee"></div>
+                <div id="bob"></div>
+                <div id="ella"></div>
+                <div id="emma"></div>
+            </div>
+            <div id="rohan">
+                <div id="sal">
+                    <div id="sam"></div>
+                </div>
+                <div id="tom"></div>
+            </div>
+        </div>
+
+
         <!-- basic tags -->
-        <p>This is paragraph</p>
-        <p>This is another paragraph</p>
+        <p id="para1">This is paragraph</p>
+        <p id="para2">This is another paragraph</p>
 
         <div>This is a div tag</div>
         <div>This is another div tag</div>
@@ -72,14 +219,198 @@
 
         <br><br><hr><br><br>
         <!-- formatting tags -->
+        <b>Hello World</b><i>Hello World</i><u>Hello World</u> <br>
+        <strong>Hello World</strong><em>Hello World</em><ins>Hello World</ins>
 
+        <br><mark>This is HTML</mark>
+
+        <br> <sup>super</sup>Normattext<sub>sub</sub>
+
+        <marquee direction="right"><center><p>HTML stands for <span style="color: red;">Hypertext Markup Language</span></p></center></marquee>
+
+        <br><br><hr><br><br>
         <!-- heading tags -->
+        <h1>Heading Tag 1</h1>
+        <h2>Heading Tag 2</h2>
+        <h3>Heading Tag 3</h3>
+        <h4>Heading Tag 4</h4>
+        <h5>Heading Tag 5</h5>
+        <h6>Heading Tag 6</h6>
 
         <!-- list tags -->
+        <ol type="i">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ol>
+
+        <ul type="circle">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+
+        <dl>
+            <dt>What is a screen reader?</dt>
+            <dd>A screen reader is a piece of computer software that converts digital text into audible and/or tactile form. Screen readers enable users to interact with their devices in a non-visual manner, and are used primarily by people who are blind or have low vision, as well as those with cognitive limitations that prevent them from viewing onscreen text and media. Many screen readers have additional features to help users navigate web pages, computer applications, and operating system interfaces.</dd>
+        </dl>
 
         <!-- table tags -->
+        <table border="2px">
+            <caption>Company Info</caption>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Laughing Bacchus Winecellars</td>
+              <td>Yoshi Tannamuri</td>
+              <td>Canada</td>
+            </tr>
+            <tr>
+              <td>Magazzini Alimentari Riuniti</td>
+              <td>Giovanni Rovelli</td>
+              <td>Italy</td>
+            </tr>
+        </table>
+
+
+        <table border="2px">
+            <caption>Student Information</caption>
+            <colgroup>
+                <col span="2" style="background-color: aquamarine;" />
+                <col span="3" style="background-color: blueviolet;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">Student Name</th>
+                    <th rowspan="2">Address</th>
+                    <th rowspan="2">Phone No.</th>
+                    <th rowspan="2">Email Address</th>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Akash</td>
+                    <td>Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Akash</td>
+                    <td>Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Akash</td>
+                    <td>Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        
 
         <!-- form tags -->
+        <form action="login.php" method="post">
+            <label>Username:</label>
+            <input name="uname" type="" value="" placeholder="John Doe" />
+            <br>
+            <label>Password:</label>
+            <input type="password" name="pwd" />
+            <input type="" />
+            <textarea rows="10" cols="50"></textarea>
+            <button type="submit">SUBMIT</button>
+        </form>
+
+
+        <form>
+            <fieldset>
+                <legend>HTML Input Tags:</legend>
+                
+                <!--text fields-->
+                <input class="textbox" type="text" name="name_inp" id="name_txt" class="textbox" value="Hello" required/>
+                <input class="textbox" type="url" placeholder="Enter a URL"/>
+                <input class="textbox" type="search" />
+                <input class="textbox" type="password" />
+                <input class="textbox" id="number-input" type="number" />
+                <input class="textbox" id="email-input" type="email" />
+                <input class="textbox" type="tel" id="telephone" />
+                <textarea class="textbox" rows="10" cols="50"></textarea><br><br>
+    
+                <!-- date/time -->
+                
+                <input id="date-picker" type="date" name="date">
+                <input type="datetime-local">
+                <input type="datetime" >
+                <input type="month">
+                <input type="week">
+                <input type="time">
+                <br><br>
+    
+                <!--check box-->
+                <input name="chk1" type="checkbox"><label>Option 1</label>
+                <input name="chk2" type="checkbox"><label>Option 2</label>
+    
+                <!-- radiobtn -->
+                <input name="gender" type="radio" value="male"><label>Male</label>
+                <input name="gender" type="radio" value="female"><label>Female</label>
+                <input name="gender" type="radio" value="others"><label>Others</label>
+    
+                <!-- selectors -->
+                <input type="color" name="color">
+                <input type="file">
+                <input type="range" name="range" min="0" max="10">
+    
+                <!-- buttons -->
+                <input type="image" src="list.png" alt="Submit" width="48" height="48">
+                <input type="button" value="CLICK" />
+                <input type="submit" value="SUBMIT"/>
+                <input type="reset" />
+    
+                <button type="submit">Submit LOGIN</button>
+                <button type="menu">MENU BUTTON</button>
+                <button type="button">Button</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+
+        <br><br><hr><br><br>
+    </body>
 
 
     </body>
