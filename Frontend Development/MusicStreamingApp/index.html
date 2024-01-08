@@ -4,7 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muse - Music Streaming</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        li {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        section#container {
+            background-color: #29263f;
+            display: flex;
+            flex-direction: row;
+        }
+        h5 {
+            color: #7873a7;
+            padding: 5px;
+        }
+        nav {
+            background-color: #2f2b45;
+            height: 95vh;
+            padding: 10px 10px;
+        }
 
+        nav #branding img {
+            width: 150px;
+            margin: 10px;
+        }
+        nav #menu, nav #library, nav #playlist {
+            margin: 20px 0px 20px 30px;
+        }
+        nav li {
+            list-style-type: none;
+            padding: 5px;
+            font-size: 13px;
+        }
+        nav i {
+            padding-inline: 10px;
+        }
+        nav #playlist button {
+        background-color: transparent;
+        border: 3px dashed white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        margin-top: 10px;
+        cursor: pointer;
+        }
+
+        #main-content {
+            width: 100vw;
+        }
+
+        header {
+            padding: 10px 0px;
+            border-bottom: 0.5px solid #7873a795;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header #menubar{
+            display: flex;
+            flex-direction: row;
+        }
+        header #menubar li {
+            list-style-type: none;
+            justify-content: space-between;
+            padding: 0px 20px;
+        }
+        header #menubar a {
+            padding: 30px 0px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        header #userarea {
+            display: flex;
+            flex-direction: row;
+            text-align: right;
+            align-items: center;
+        }
+        header #userinfo {
+            position: relative;
+        }
+        header #dropdown-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #7873a7;
+        }
+        #userinfo:hover #dropdown-content {
+            display: block;
+        }
+        header #dropdown-content {
+            position: absolute;
+            display: none;
+            right: 0;
+            background-color: #7873a7;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        header #dropdown-content a {
+            display: block;
+            padding: 10px 30px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        main #music-page {
+            height: 80vh;
+        }
+
+        main aside {
+            height: 75vh;
+            overflow-y: scroll;
+            border: 2px solid #2f2b45;
+        }
+        main aside::-webkit-scrollbar {
+            width: 7px;
+        }
+        main aside::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+        main aside::-webkit-scrollbar-thumb {
+            background-color: #7873a7;
+            border-radius: 10px;
+        }
+        main aside #song-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px;
+        }
+        #song-controls #control-underlay {
+            background-color:#7873a7;
+            padding: 5px 8px;
+            border-radius: 30px;
+        }
+        footer {
+            background-color: #1d1b2d;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+        }
+        footer section {
+            margin: 10px 25px;
+        }
+        .song-profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 40px;
+        }
+        .song-profile img {
+            height: 50px;
+            border-radius: 10px;
+        }
+        .song-profile h6 {
+            color: aliceblue;
+            font-size: 15px;
+            font-family: 'Noto Sans', sans-serif;
+            margin: 5px 0px 2px 10px;
+            white-space: nowrap;
+        }
+        
+        .song-profile span {
+            color: rgb(94, 121, 146);
+            font-size: 12px;
+            margin: 2px 0px 5px 10px;
+            white-space: nowrap;
+        }
+        #music-player audio {
+            height: 30px;
+        }
+        #music-player audio::-webkit-media-controls-panel {
+            background-color:  #1d1b2d;
+            border-radius: 0;
+        }
+        #music-player audio::-webkit-media-controls-play-button {
+            background-color: white;
+            height: 20px;
+            width: 20px;
+            border-radius: 30px;
+        }
+        #music-player audio::-webkit-media-controls-mute-button {
+            display: none;
+            width: 0;
+        }
+        #music-player audio::-webkit-media-controls-current-time-display, #music-player audio::-webkit-media-controls-time-remaining-display {
+            color: white;
+        }
+        #music-player audio::-webkit-media-controls-timeline {
+            width: 300px;
+            margin-inline: 20px;
+            background-color: aliceblue;
+            border-radius: 20px;
+        }
+
+        #music-controls i {
+            color: white;
+            margin-right: 50px;
+        }
+        #music-controls i:hover {
+            font-size: 17px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <section id="container">
@@ -25,7 +244,7 @@
                 <li><i class="fa-solid fa-compact-disc"></i>Albums</li>
                 <li><i class="fa-solid fa-heart"></i>Favourites</li>
             </div>
-            <div id="playlst">
+            <div id="playlist">
                 <h5>PLAYLISTS</h5>
                 <li><i class="fa-solid fa-headphones"></i>playlist 1</li>
                 <li><i class="fa-solid fa-headphones"></i>playlist 2</li>
@@ -46,7 +265,7 @@
                     <div id="userinfo">
                         <span>Username</span>
                         <div id="user-dropdown">
-                            <button id="dropdown-btn">userid-dsf34s4dfg5rt3</button>
+                            <button id="dropdown-btn">userid-dsf34s4dfg5rt3<i class="fa-solid fa-circle-chevron-down"></i></button>
                             <div id="dropdown-content">
                                 <li><a href="">Profile</a></li>
                                 <li><a href="">Account</a></li>
@@ -251,10 +470,16 @@
             </audio>
         </section>
         <section id="music-controls">
-            <i class="fa-regular fa-heart"></i>
+            <i id="wishlist-btn" class="fa-regular fa-heart" onclick="addtowishlist()"></i>
             <input type="range" />
         </section>
     </footer>
     <script src="https://kit.fontawesome.com/9e2c9fd14a.js" crossorigin="anonymous"></script>
+    <script>
+        var addtowishlist = () => {
+            document.getElementById("wishlist-btn").classList.replace("fa-regular","fa-solid");
+            document.getElementById("wishlist-btn").style.color = "red";
+        }
+    </script>
 </body>
 </html>
