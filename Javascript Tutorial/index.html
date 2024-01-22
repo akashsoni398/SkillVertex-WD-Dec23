@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+    <style>
+        /* comment */
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <!-- comments -->
+    <p id="para">This is a <b>Javascript Tutorial</b></p>
+    <input type="text" id="input" placeholder="type anything..." />
+    <button id="btn" type="button">Click!</button>
+    <script>
+        // single line comment
+        
+        /* multiple
+        line
+        comment */
+
+        // fundamentals of code - 6
+            // datastorage/data types
+                var x = "Hello";
+                let y = "World";
+                const z = 2344;
+
+                let var1 = "String";
+                let num = 42343;
+                let numasstr = "42343";
+                let bool = true;
+                let float = 4535.45;
+                let array = ["423432",324234,"HEllo",true];
+                let func = () => {
+                    return "function";
+                }
+                let object =  {
+                    key: "values",
+                    key2: "value2",
+                    key3: {
+                        subkey1: "subvalue1"
+                    },
+                    firstname: "Akash",
+                    lastname: "Soni",
+                    fullname: function() {
+                        return this.firstname+" "+this.lastname
+                    }
+                }
+
+            // input/output
+                
+                let name = document.getElementById("input").value;
+                document.getElementById("btn").addEventListener("click",() => {});
+                console.log(document.getElementById("para").innerHTML);
+                console.log(document.getElementById("para").innerText);
+
+
+
+                document.getElementById("para").innerText = "<b>Hello World</b>";
+                
+                console.log("random text");
+                console.error("random error");
+                
+                document.write("This is a static text from JS");
+                
+                window.alert("This is an alert!!!");
+                var reply = window.prompt("Please enter 'yes' to delete the file.") ?? "";
+                var reply2 = window.confirm("Are you sure?") ?? false;
+                    if(reply.toLowerCase() == 'yes') {
+                        document.getElementById('para').innerText = "File deleted";
+                    }
+                    if(reply2==true) {
+                        document.getElementById('para').innerText = "File deleted";
+                    }
+
+                window.print();
+
+            // operators
+                // arithmetic operators (+,-,*,/,%,++,--)
+                // comparison operators (<,>,<=,>=,==,===,!=)
+                // logical operators (&&,||,!)
+                    if(age>18 && age<65) {
+                        console.log("Youre an adult")
+                    }
+                    else if(age>=65 || retired==true ) {
+                        console.log("Senior citizen");
+                    }
+                    else if(!(age>=18)) {
+
+                    }
+                // assignment operators (=,+=,-=,*=,/=,%=)
+                    a=10; b=20;
+                    a=a+b; a+=b;
+                    a=a-b; a-=b;
+                // conditional operator (?:)
+                    (condition) ? "print true statements" : "print false statements"; 
+                    console.log((age>18) ? "you are an adult" : "you are not an adult");
+                    let result1 = (age>18) ? "you are an adult" : "you are not an adult";
+                // nullish coalescing operator (??)
+                    let result2 = "true statements" ?? "false statements";
+                    
+
+            // branching
+                
+            
+
+            // looping 
+
+            // functions
+    </script>
+</body>
+</html>
