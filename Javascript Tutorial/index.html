@@ -83,34 +83,215 @@
                 // arithmetic operators (+,-,*,/,%,++,--)
                 // comparison operators (<,>,<=,>=,==,===,!=)
                 // logical operators (&&,||,!)
+                    let age = 20;
                     if(age>18 && age<65) {
                         console.log("Youre an adult")
                     }
                     else if(age>=65 || retired==true ) {
                         console.log("Senior citizen");
                     }
-                    else if(!(age>=18)) {
 
-                    }
                 // assignment operators (=,+=,-=,*=,/=,%=)
                     a=10; b=20;
                     a=a+b; a+=b;
                     a=a-b; a-=b;
+
                 // conditional operator (?:)
-                    (condition) ? "print true statements" : "print false statements"; 
+                    (a>10) ? "print true statements" : "print false statements"; 
                     console.log((age>18) ? "you are an adult" : "you are not an adult");
                     let result1 = (age>18) ? "you are an adult" : "you are not an adult";
+
                 // nullish coalescing operator (??)
                     let result2 = "true statements" ?? "false statements";
                     
 
             // branching
-                
-            
+                    age = 16;
+                    let ll = true;
+                    let dl = false;
 
-            // looping 
+                // if statement
+                    if(age>=18 && dl==false) {
+                        console.log("Eligible for Drivers' license");
+                    }
+
+                // if...else statement
+                    if(age>=18 && ll==true) {
+                        console.log("Eligible for Drivers' license")
+                    }
+                    else {
+                        console.log("Not eligible for Drivers' license")
+                    }
+
+                // if...elseif...else statement
+                    if(age<16) {
+                        console.log("Not eligible for learners' license");
+                    }
+                    else if(age>=16 && age<18 && ll==false) {
+                        console.log("Eligible for learners' license");
+                    }
+                    else if(age>=16 && age<18 && ll==true) {
+                        console.log("Not eligible for drivers' license below the age of 18");
+                    }
+                    else if(age>=18 && age<65 && ll==true) {
+                        console.log("Eligible for drivers' license");
+                    }
+                    else {
+                        console.error("There was an error while processing your data");
+                    }
+
+                //switch case
+                    let grade = "b+";
+                    grade = grade.toUpperCase();
+                    switch(grade) {
+                        case "A+":
+                            console.log("You've scored above 95");
+                            break;
+                        case "A-":
+                            console.log("You've scored between 85 and 95");
+                            break;
+                        case "B+":
+                            console.log("You've scored between 75 and 85");
+                            break;
+                        case "B-":
+                            console.log("You've scored between 65 and 75");
+                            break;
+                        case "C":
+                            console.log("You've scored between 55 and 65");
+                            break;
+                        case "D":
+                            console.log("You've scored between 40 and 55");
+                            break;
+                        case "F":
+                            console.log("You've scored below 40");
+                            break;
+                        default:
+                            console.error("Value of grade is out of bounds");   
+                    }
+                    
+            // looping
+                    
+                // while loop
+                    let i = 100;
+                    while(i<=50) {
+                        if(i%2==0) {document.write(`${i} is an even number<br>`)};
+                        i++;
+                    }
+
+                // for loop
+                    for(let j=50; j>=0; j--) {
+                        if(j%2!=0) {document.write(`${j} is an odd number<br>`)};
+                    }
+                    
+                // do...while loop
+                    let k=100;
+                    do {
+                        if(k%2==0) {document.write(`${k} is an even number<br>`)};
+                        k++;
+                    }
+                    while(k<=50);
+               
+                //for...in loop
+                object =  {
+                    key: "values",
+                    key2: "value2",
+                    key3: {
+                        subkey1: "subvalue1"
+                    },
+                    firstname: "Akash",
+                    lastname: "Soni",
+                    fullname: function() {
+                        return this.firstname+" "+this.lastname
+                    }
+                }
+
+                for(let value in object) {
+                    document.write(object[value]);
+                }
+
+                // for...of loop
+                for(let value of array) {
+                    console.log(value);
+                }
+
+            // loop control
+                // break statement
+                    i=0;
+                    while(i<=50) {
+                        console.log(i);
+                        if(i==25) break;
+                        i++;
+                    }
+
+                // continue statement
+                    i=0;
+                    while(i<=50) { 
+                        i++; 
+                        
+                        if(i==25) continue;
+                        console.log(i);
+                        
+                      
+                    }
 
             // functions
+                // inbuilt functions
+
+                // user defined function
+                    // ES5 method
+                        function myfunc() {
+
+                        }
+
+                    // ES6 method
+                        var myfunc = () => {
+
+                        }
+
+                        setTimeout(() => {
+                            console.log("timeout ended")
+                        }, 5000);
+
+                        console.log("Post timeout")
+
+
+                        let promise = new Promise(function(resolve, reject) {
+                            setTimeout(() => console.log("Promise Timeout Ended"), 5000);
+                        });
+                        promise.then(
+                            result => console.log("Post promise timeout"),
+                            error =>console.log("Error")
+                        );
+
+
+                        async function myfunct() {
+                            var xyz = await setTimeout(()=> {
+                                "Hello World"
+                            },5000);
+                            let greet = await xyz;
+                            console.log(greet);
+                        }
+                        myfunct();
+
+                        function delay(ms) {
+                            return new Promise(resolve => setTimeout(resolve, ms));
+                        }
+
+                        async function myfunct() {
+                            await delay(5000);
+                            let greet = "Hello World";
+                            return greet;
+                        }
+
+                        async function example() {
+                            var xyz = await myfunct();
+                            console.log(xyz); // This will output "Hello World" after a delay of 5 seconds
+                        }
+
+                        example();
+
+myfunct();
+                        
     </script>
 </body>
 </html>

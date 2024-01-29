@@ -449,104 +449,7 @@
 
                 <aside id="song-list">
                     <h4>Hot Boosts</h4>
-                    <div id="song-item">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg"/>
-                            <div>
-                                <h6>Song Name</h6>
-                                <span>Song Artist</span>
-                            </div>
-                        </div>
-                        <div id="song-controls">
-                            <span id="control-underlay">
-                                <i class="fa-solid fa-play"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div id="song-item">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg"/>
-                            <div>
-                                <h6>Song Name</h6>
-                                <span>Song Artist</span>
-                            </div>
-                        </div>
-                        <div id="song-controls">
-                            <span id="control-underlay">
-                                <i class="fa-solid fa-play"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div id="song-item">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg"/>
-                            <div>
-                                <h6>Song Name</h6>
-                                <span>Song Artist</span>
-                            </div>
-                        </div>
-                        <div id="song-controls">
-                            <span id="control-underlay">
-                                <i class="fa-solid fa-play"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div id="song-item">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg"/>
-                            <div>
-                                <h6>Song Name</h6>
-                                <span>Song Artist</span>
-                            </div>
-                        </div>
-                        <div id="song-controls">
-                            <span id="control-underlay">
-                                <i class="fa-solid fa-play"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div id="song-item">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg"/>
-                            <div>
-                                <h6>Song Name</h6>
-                                <span>Song Artist</span>
-                            </div>
-                        </div>
-                        <div id="song-controls">
-                            <span id="control-underlay">
-                                <i class="fa-solid fa-play"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div id="song-item">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg"/>
-                            <div>
-                                <h6>Song Name</h6>
-                                <span>Song Artist</span>
-                            </div>
-                        </div>
-                        <div id="song-controls">
-                            <span id="control-underlay">
-                                <i class="fa-solid fa-play"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div id="song-item">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg"/>
-                            <div>
-                                <h6>Song Name</h6>
-                                <span>Song Artist</span>
-                            </div>
-                        </div>
-                        <div id="song-controls">
-                            <span id="control-underlay">
-                                <i class="fa-solid fa-play"></i>
-                            </span>
-                        </div>
-                    </div>
+
                 </aside>
             </main>
         </section>
@@ -572,6 +475,25 @@
     </footer>
     <script src="https://kit.fontawesome.com/9e2c9fd14a.js" crossorigin="anonymous"></script>
     <script>
+        for(let i=1; i<=21; i++) {
+            document.getElementById("song-list").innerHTML = document.getElementById("song-list").innerHTML + `
+                <div id="song-item">
+                    <div class="song-profile">
+                        <img src="./assets/song-label.jpeg"/>
+                        <div>
+                            <h6>Song Name ${i}</h6>
+                            <span>Song Artist</span>
+                        </div>
+                    </div>
+                    <div id="song-controls">
+                        <span id="control-underlay">
+                            <i class="fa-solid fa-play"></i>
+                        </span>
+                    </div>
+                </div>
+            `;
+        }
+
         var addtowishlist = () => {
             document.getElementById("wishlist-btn").classList.replace("fa-regular","fa-solid");
             document.getElementById("wishlist-btn").style.color = "red";
