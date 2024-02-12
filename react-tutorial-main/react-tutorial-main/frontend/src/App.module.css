@@ -1,0 +1,11 @@
+div#greeting {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+div.itemStyle {
+    color: rgb(72, 43, 4);
+    font-size: 20px;
+    font-weight: bold;
+}

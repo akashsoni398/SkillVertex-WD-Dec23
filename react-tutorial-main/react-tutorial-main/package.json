@@ -1,0 +1,14 @@
+{
+  "name": "react-tutorial",
+  "version": "1.0.0",
+  "description": "React tutorial for Skillvertex Dec batch of Web dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
+}
