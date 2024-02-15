@@ -1,0 +1,125 @@
+{
+    "expenses": [
+      {
+        "itemid": 1,
+        "item_name": "Groceries",
+        "item_amount": 50.00,
+        "item_category": "Food"
+      },
+      {
+        "itemid": 2,
+        "item_name": "Dinner at Restaurant",
+        "item_amount": 75.50,
+        "item_category": "Food"
+      },
+      {
+        "itemid": 3,
+        "item_name": "Gasoline",
+        "item_amount": 40.00,
+        "item_category": "Transportation"
+      },
+      {
+        "itemid": 4,
+        "item_name": "Movie Tickets",
+        "item_amount": 25.00,
+        "item_category": "Entertainment"
+      },
+      {
+        "itemid": 5,
+        "item_name": "Monthly Rent",
+        "item_amount": 1200.00,
+        "item_category": "Housing"
+      },
+      {
+        "itemid": 6,
+        "item_name": "Utilities",
+        "item_amount": 150.00,
+        "item_category": "Housing"
+      },
+      {
+        "itemid": 7,
+        "item_name": "Clothing",
+        "item_amount": 80.00,
+        "item_category": "Shopping"
+      },
+      {
+        "itemid": 8,
+        "item_name": "Gym Membership",
+        "item_amount": 50.00,
+        "item_category": "Health"
+      },
+      {
+        "itemid": 9,
+        "item_name": "Medical Insurance",
+        "item_amount": 200.00,
+        "item_category": "Health"
+      },
+      {
+        "itemid": 10,
+        "item_name": "Books",
+        "item_amount": 30.00,
+        "item_category": "Education"
+      },
+      {
+        "itemid": 11,
+        "item_name": "Coffee",
+        "item_amount": 5.00,
+        "item_category": "Food"
+      },
+      {
+        "itemid": 12,
+        "item_name": "Taxi Ride",
+        "item_amount": 20.00,
+        "item_category": "Transportation"
+      },
+      {
+        "itemid": 13,
+        "item_name": "Concert Tickets",
+        "item_amount": 100.00,
+        "item_category": "Entertainment"
+      },
+      {
+        "itemid": 14,
+        "item_name": "Internet Bill",
+        "item_amount": 60.00,
+        "item_category": "Utilities"
+      },
+      {
+        "itemid": 15,
+        "item_name": "Mobile Phone Bill",
+        "item_amount": 80.00,
+        "item_category": "Utilities"
+      },
+      {
+        "itemid": 16,
+        "item_name": "Eating Out",
+        "item_amount": 40.00,
+        "item_category": "Food"
+      },
+      {
+        "itemid": 17,
+        "item_name": "Car Insurance",
+        "item_amount": 100.00,
+        "item_category": "Transportation"
+      },
+      {
+        "itemid": 18,
+        "item_name": "Movie Streaming Service",
+        "item_amount": 15.00,
+        "item_category": "Entertainment"
+      },
+      {
+        "itemid": 19,
+        "item_name": "Yoga Class",
+        "item_amount": 20.00,
+        "item_category": "Health"
+      },
+      {
+        "itemid": 20,
+        "item_name": "Stationery",
+        "item_amount": 10.00,
+        "item_category": "Education"
+      }
+    ]
+  }
+  
